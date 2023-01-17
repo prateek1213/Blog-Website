@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="css/styles.css">
+
+<%- include("partials/header") -%>
+<h1 class="para">Home</h1>
+<p class="para"><%=content %></p>
+<% ans %>
+<% ans.forEach((val)=>{ %>
+<ul class="list-group ">
+  <li class="list-group-item para" > <%= val.title + " : "+ val.post  %><a href="/posts/:<%= val.title %>">Read more</a>  </li> 
+</ul>
+<% } )%>
+<a type="button" class="btn btn-outline-success para" href="/compose" >Compose</a>
+<!-- <%- include("partials/footer") -%> -->
